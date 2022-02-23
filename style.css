@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Permanent+Marker&family=Satisfy&family=Staatliches&display=swap');
+:root {
+  --primary-font: "Satisfy";
+  --secondary-font: "Staatliches";
+  --content-font: "Permanent Marker";
+}
+
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+body{
+  background-image: linear-gradient(to left, lightblue,whitesmoke);
+}
+.Main-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  flex-direction: column;
+  z-index: -1;
+}
+.title {
+  font-size: 2rem;
+  font-family: var(--secondary-font);
+  margin: 50px auto;
+  letter-spacing: 1.6rem;
+}
+
+/* grid container */
+.grid-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.grids {
+  width: 150px;
+  height: 150px;
+  border: 1px solid black;
+  font-family: var(--content-font);
+  transition: all 400ms ease-in-out;
+}
+
+/* border styling */
+.grids.one {
+  border-left: none;
+  border-top: none;
+}
+.grids.two {
+  border-top: none;
+}
+.grids.three {
+  border-right: none;
+  border-top: none;
+}
+
+.grids.four {
+  border-left: none;
+}
+.grids.six {
+  border-right: none;
+}
+
+.grids.eight {
+  border-bottom: none;
+}
+.grids.seven {
+  border-left: none;
+  border-bottom: none;
+}
+
+.grids.nine {
+  border-right: none;
+  border-bottom: none;
+}
+
+/* grid styles */
+
+.grid-style {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 7.5rem;
+  padding: 5px;
+  font-weight: 200;
+}
+
+/* result */
+
+#result {
+  font-family: var(--primary-font);
+  font-size: 6rem;
+  color: white;
+  font-weight: 900;
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 3;
+}
+
+.reset-btn {
+  display: none;
+  position: absolute;
+  top: 60%;
+  right: 50%;
+  transform: translate(50%, -50%);
+  z-index: 3;
+  border: none;
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  padding: 20px;
+  border-radius: 15px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.display-btn {
+  display: block;
+}
+
